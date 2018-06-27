@@ -17,7 +17,7 @@ At first, you should know the precision context of the APC routine executed and 
 
 Actually, CreateProcessW has two steps to create a process. It will call NtCreateProcessEx first basically it means "fork".
 
-It falls into the kernel via NtCreateProcessEx, if everything goes well the object manager will create an initial an ```EPROCESS``` object, prepare target process memory space and PSNotifyRoutine will be called.
+It falls into the kernel via NtCreateProcessEx, if everything goes well the object manager will create an initialed  ```EPROCESS``` object, prepare target process memory space and PSNotifyRoutine will be called.
 In step two, the main thread of target process will be created via NtCreateThread. 
 
 Similarly, ```NtCreateThread``` in kernel responds to initial thread data struct, after that for user thread a user mode APC which routine is ```PspSystemDll.LoaderInitRoutine``` will be inserted.
@@ -76,5 +76,3 @@ When ```LdrpInitialize``` has been done we get an opportunity to load ```*****.d
 
 Unless we have a strict tracer that it can be loaded in first APC routine, we will miss the behaviors of DllMain of target process static imports DLL.
 TLS should be another issue.
-
-
