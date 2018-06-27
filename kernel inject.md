@@ -20,13 +20,13 @@ Actually, CreateProcessW has two steps to create a process. It will call NtCreat
 It falls into the kernel via NtCreateProcessEx, if everything goes well the object manager will create an initialed  ```EPROCESS``` object, prepare target process memory space and PSNotifyRoutine will be called.
 In step two, the main thread of target process will be created via NtCreateThread. 
 
-Similarly, ```NtCreateThread``` in kernel responds to initial thread data struct, after that for user thread a user mode APC which routine is ```PspSystemDll.LoaderInitRoutine``` will be inserted.
+Similarly, ```NtCreateThread``` in kernel responds to initial thread data struct, after that for user thread a user mode APC which routine is ```PspSystemDll```. ```LoaderInitRoutine``` will be inserted.
 
-It will be back to ring3, EIP equal to ```LdrInitializeThunk```.
+Then it will be back to ring3, EIP equal to ```LdrInitializeThunk```.
 
 In ```LdrInitializeThunk``` all of the dependencies will be loaded(```LdrpInitialize```). Target process image will be loaded and ntdll, kernel32..., you can observe them in LoadImageNotifyRoutine one by one. 
 
-If you observer it in a kernel debugger you can see that they are all in ZwMapViewOfSection's call stack. 
+If you observer it in a kernel debugger you can see that they are all in ```ZwMapViewOfSection```'s call stack. 
 
 When ```LdrpInitialize``` has done, ```ZwContinue``` will be called to set EIP to ```RtlUserThreadStart``` and going into kernel and second time backing to ring3, stopping at ```RtlUserThreadStart```.
 
