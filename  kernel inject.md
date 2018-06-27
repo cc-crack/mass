@@ -1,11 +1,11 @@
-#Inject tracer issue
-##Background
+# Inject tracer issue
+## Background
 
 If you have read all of the ```*****``` code you will note that the most of logs are produced by the tracer. If you are going deep into how *****.dll injected there are many gaps in that process.
 In your test maybe you have found that sometimes tracer's logs were missing like ```*****-***``` or the behaviors on the x64 platform were so weird because of there are a lot of codes for the trade-off in an asynchrony process.
 
 
-##Inject tracer form kernel.
+## Inject tracer form kernel.
 
 The good news is we have a kernel module called ```*****```, it will help to inject the tracer into target process at a perfect moment in less code.
 
@@ -72,7 +72,7 @@ So we run a shellcode in APC routine to hook ZwContinue since ```LdrpInitialize`
 
 When ```LdrpInitialize``` has been done we get an opportunity to load ```*****.dll``` in a clearly and safely context.
 
-##Known issue
+## Known issue
 
 Unless we have a strict tracer that it can be loaded in first APC routine, we will miss the behaviors of DllMain of target process static imports DLL.
 TLS should be another issue.
